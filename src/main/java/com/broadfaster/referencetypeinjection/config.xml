@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean class="com.broadfaster.referencetypeinjection.Address" name="address1">
+        <property name="city" value="lucknow" />
+        <property name="state" value="UttarPradesh" />
+    </bean>
+
+    <bean class="com.broadfaster.referencetypeinjection.Student" name="student1">
+        <property name="name" value="Akshat"/>
+        <property name="age" value="25"/>
+
+        <!--
+        <property name="address">
+            <ref bean="address1" />
+        </property>
+        instead of this use below method
+        -->
+        <property name="address" ref="address1" />
+    </bean>
+
+</beans>

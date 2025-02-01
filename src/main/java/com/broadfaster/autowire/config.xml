@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+<!--this bean name should be same as the variable name in the Student class i.e "address" if you use byName Autowiring-->
+    <bean class="com.broadfaster.autowire.Address" name="address">
+        <property name="city" value="Dehradun" />
+    </bean>
+
+    <bean class="com.broadfaster.autowire.Address" name="address2">
+        <property name="city" value="Lucknow" />
+    </bean>
+
+    <bean class="com.broadfaster.autowire.Student" name="student1" autowire="byName">
+        <property name="name" value="Akshat Kumar" />
+    </bean>
+
+
+</beans>

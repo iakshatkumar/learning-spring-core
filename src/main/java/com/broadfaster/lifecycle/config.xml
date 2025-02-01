@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <context:annotation-config />
+
+<!--    Using the xml config to implement lifecycle methods -->
+<!--    <bean class="com.broadfaster.lifecycle.Employee" name="emp1" init-method="init" destroy-method="destroy">-->
+<!--        <constructor-arg name="employeeId" value="1" />-->
+<!--        <constructor-arg name="employeeName" value="Nitin Chauhan" />-->
+<!--    </bean>-->
+
+<!--    creating a bean that will use spring interfaces to implement lifecycle methods-->
+<!--    <bean class="com.broadfaster.lifecycle.Student" name="student1">-->
+<!--        <property name="name" value="Utkarsh Raj" />-->
+<!--    </bean>-->
+
+
+<!--    Creating a bean that will use Annotations to implement Lifecycle Method -->
+    <bean class="com.broadfaster.lifecycle.StudentUsingAnnotation" name="studentUsingAnnotation1" >
+        <property name="name" value="Chandan Kumar" />
+    </bean>
+
+
+</beans>
